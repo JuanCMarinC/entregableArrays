@@ -1,4 +1,4 @@
-let contactosPre = ["JUAN MARIN","DAVID CARDENAS","DANIELA MARIN"];
+let contactosPre = ["JOSE MARTINEZ","JUAN MARIN","DAVID CARDENAS","DANIELA MARIN","ROBINSON RAMIREZ","JUAN CARLOS COLINA"];
 
 function newContacto(contac){
     contactosPre.push(contac.toUpperCase());
@@ -47,7 +47,7 @@ newContacto(nombre);
 
 // Aqui mostramos el arreglo predeterminado con el nuevo contacto JULIAN y mandamos a borrar el nombre DAVID CARDENAS 
 console.log(contactosPre);
-nombre = "DAVID CARDENAS";
+nombre = "JUAN MARIN";
 borrarContac(nombre);
 
 
