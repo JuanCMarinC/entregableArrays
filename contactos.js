@@ -10,7 +10,6 @@ function borrarContac(contac){
     let nombre = contac.toUpperCase();
 
     while(contador < contactosPre.length){
-
         if(contactosPre[contador]==nombre){
 
             let contador2 = contador;
@@ -55,3 +54,5 @@ borrarContac(nombre);
 console.log(contactosPre);
 
 imprimirContactos();
+
+
