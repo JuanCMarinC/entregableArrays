@@ -67,9 +67,30 @@ function newContacto(){
 
 
 function deleteContacto(){
-    let contador4 = 0 ;
     let idPet= parseInt(prompt("Por favor digite el ID del contacto a eliminar"));
     contactos2 = contactos2.filter(item => item.ide != idPet);   
+    imprimirContactos();
+}
+
+function updateContacto(){
+    var idPet= parseInt(prompt("Por favor digite el ID del contacto a editar"));
+    var contactoTemp = contactos2.find((element) => element.ide == idPet);
+    var cadena = prompt("Por favor modifique la informacion dejando los / como separador de cada campo: ",
+                        contactoTemp.ide +"/"+ contactoTemp.nombres +"/"+ contactoTemp.apellidos +"/"+
+                        contactoTemp.telefono +"/"+ contactoTemp.ubicaciones[0] +"/"+ 
+                        contactoTemp.ubicaciones[1]);
+    var arrTemp= cadena.split("/");
+
+    let contTemp = {
+        ide: arrTemp[0],
+        nombres: arrTemp[1],
+        apellidos: arrTemp[2],
+        telefono: arrTemp[3],
+        ubicaciones: [arrTemp[4],arrTemp[5]]
+    }   
+    
+    contactos2[arrTemp[0]-1] = contTemp;
+
     imprimirContactos();
 }
 
